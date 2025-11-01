@@ -1,7 +1,58 @@
 <mat-grid-list cols="1" *ngIf="!heroe else divHeroe">
     <mat-grid-tile>
-        <mat-spinner></mat-spinner>
+        <mat-spinner diameter="80" strokeWidth="6"></mat-spinner>
     </mat-grid-tile>
 </mat-grid-list>
 
-<ng-template #divHeroe>{{ heroe | json }}</ng-template>
+<ng-template #divHeroe>
+    <div
+        fxLayout="row"
+        fxLayout.xs="column"
+        fxLayoutGap="30px"
+        class="hero-container"
+    >
+    <!-- IMAGEN -->
+    <div fxFlex="50" class="hero-image-container">
+        <h1 class="hero-title">
+            {{ heroe.superhero }}
+            <small>- {{ heroe.alter_ego }}</small>
+        </h1>
+        <mat-divider></mat-divider>
+        <img [src]="heroe | imagen" alt="{{ heroe.superhero }}" />
+    </div>
+
+    <!-- DETALLES -->
+    <div fxFlex="50" class="hero-details">
+        <h2 class="publisher">{{ heroe.publisher }}</h2>
+        <mat-divider></mat-divider>
+
+        <mat-card class="hero-info-card">
+            <mat-list>
+            <mat-list-item>
+                <mat-icon matListIcon color="primary">book</mat-icon>
+                <span>{{ heroe.first_appearance }}</span>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon color="accent">people</mat-icon>
+                <span>{{ heroe.characters }}</span>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon color="warn">public</mat-icon>
+                <span>{{ heroe.publisher }}</span>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon color="primary">person</mat-icon>
+                <span>{{ heroe.alter_ego }}</span>
+            </mat-list-item>
+            </mat-list>
+        </mat-card>
+
+        <div class="button-container" *ngIf="!heroeBuscado">
+            <button mat-raised-button color="warn" (click)="regresar()">
+            <mat-icon>arrow_back</mat-icon>
+            Regresar
+            </button>
+        </div>
+        </div>
+    </div>
+</ng-template>
