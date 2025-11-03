@@ -1,20 +1,15 @@
-<mat-grid-list cols="3" rowHeight="100vh" class="login-grid">
-  <mat-grid-tile></mat-grid-tile>
+<div class="login-container">
+  <div class="login-card">
+    <h2>Bienvenido</h2>
 
-  <mat-grid-tile>
-    <div class="login-card">
-      <h2>Bienvenido</h2>
-      <div class="buttons-container">
-        <button mat-raised-button color="primary" (click)="login()">
-          Ingresar
-        </button>
+    <div class="buttons-container">
+      <button mat-raised-button color="primary" (click)="login()">
+        Ingresar
+      </button>
 
-        <button mat-raised-button color="warn" (click)="ingresarSinLogin()">
-          Ingresar Sin Login
-        </button>
-      </div>
+      <button mat-raised-button color="warn" (click)="ingresarSinLogin()">
+        Ingresar Sin Login
+      </button>
     </div>
-  </mat-grid-tile>
-
-  <mat-grid-tile></mat-grid-tile>
-</mat-grid-list>
+  </div>
+</div>

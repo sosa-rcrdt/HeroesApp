@@ -6,53 +6,64 @@ import { AuthService } from '../../services/auth.service';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styles: [`
-  /* Fondo general oscuro con degradado */
-  .login-grid {
-    background-color: #0e0e0e;
-  }
+    /* Contenedor general: centra vertical y horizontalmente */
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #0b0b0b;
+      padding: 20px;
+    }
 
-  /* Card central */
-  .login-card {
-    background: #262626;
-    padding: 40px 30px;
-    border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    color: #e5e5e5;
-    min-width: 280px;
-  }
-
-  .login-card h2 {
-    margin-bottom: 25px;
-    font-weight: 600;
-    color: #ffffff;
-  }
-
-  /* Contenedor de botones */
-  .buttons-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-  }
-
-  /* Botones */
-  button {
-    width: 100%;
-    font-weight: 500;
-  }
-
-  @media (max-width: 600px) {
+    /* Card */
     .login-card {
-      width: 90%;
-      padding: 25px;
+      background: #262626;
+      padding: 40px 30px;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      color: #e5e5e5;
+      width: 100%;
+      max-width: 320px;
     }
 
-    .buttons-container {
-      gap: 10px;
+    .login-card h2 {
+      margin-bottom: 25px;
+      font-weight: 600;
+      color: #ffffff;
     }
-  }
-`]
+
+    /* Botones */
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    button {
+      width: 100%;
+      font-weight: 500;
+    }
+
+    /* Responsivo */
+    @media (max-width: 480px) {
+      .login-card {
+        padding: 25px 20px;
+        max-width: 90%;
+      }
+
+      .login-card h2 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      .buttons-container {
+        gap: 10px;
+      }
+    }
+  `]
+
 
 })
 export class LoginComponent {

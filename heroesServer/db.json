@@ -2,8 +2,8 @@
   "usuarios": [
     {
       "id": 1,
-      "usuario": "John Doe",
-      "email": "john.due@gmail.com"
+      "usuario": "Nelson Sosa",
+      "email": "nelson.sosa@gmail.com"
     }
   ],
   "heroes": [
@@ -166,15 +166,6 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
-    },
-    {
-      "superhero": "Gokú",
-      "alter_ego": "",
-      "characters": "",
-      "first_appearance": "",
-      "publisher": "DC Comics",
-      "alt_img": "",
-      "id": "LQYvNLE"
     }
   ]
 }
