@@ -53,7 +53,7 @@ npm install
 
 ## Ejecución del Frontend (Angular)
 
-Inicia el servidor de desarrollo, dentro de la carpeta `heroesApp/`:
+Inicia el servidor de desarrollo dentro de la carpeta `heroesApp/`:
 ```bash
 ng serve
 ```
@@ -101,24 +101,27 @@ El proyecto utiliza archivos de configuración para definir el entorno:
 ## Estructura del proyecto
 
 ```
-src/
+heroesApp/
 │
-├── app/
-│   ├── auth/              # Módulo de autenticación
-│   ├── heroes/            # CRUD principal de héroes
-│   │   ├── components/    # Componentes reutilizables
-│   │   ├── pages/         # Listado, agregar, buscar, etc.
-│   │   ├── services/      # Comunicación con backend
-│   │   └── pipes/         # Pipes personalizados
-│   ├── material/          # Módulo con imports de Angular Material
-│   ├── shared/            # Elementos compartidos
-│   ├── app-routing.module.ts
-│   └── app.module.ts
+├── src/
+│   ├── app/
+│   │   ├── auth/              # Módulo de autenticación
+│   │   ├── heroes/            # CRUD principal de héroes
+│   │   │   ├── components/    # Componentes reutilizables
+│   │   │   ├── pages/         # Listado, agregar, buscar, etc.
+│   │   │   ├── services/      # Comunicación con backend
+│   │   │   └── pipes/         # Pipes personalizados
+│   │   ├── material/          # Módulo con imports de Angular Material
+│   │   ├── shared/            # Elementos compartidos
+│   │   ├── app-routing.module.ts
+│   │   └── app.module.ts
+│   ├── assets/
+│   │   └── heroes/            # Imágenes locales de los héroes
+│   └── environments/          # Configuración de entornos
 │
-├── assets/
-│   └── heroes/            # Imágenes locales de los héroes
-│
-└── environments/          # Configuración de entornos
+heroesServer/
+├── db.json                    # Base de datos del backend simulado
+└── node_modules/              # Dependencias de JSON-Server
 ```
 
 ---
@@ -142,6 +145,12 @@ src/
 Este proyecto fue desarrollado con fines académicos para la materia **Desarrollo de Sitios Web (BUAP)**.  
 Uso libre con fines educativos.
 
-## Colaborador
+---
 
-- Nelson Ricardo Sosa Francisco
+## Colaboradores y Créditos
+
+**Autor:** Nelson Ricardo Sosa Francisco  
+**Profesor:** Luis Yael Méndez Sánchez (BUAP)  
+**Basado en el curso:** *Angular: de cero a experto* – Fernando Herrera (Udemy)
+
+Agradecimiento especial a **Fernando Herrera** por el material didáctico y la estructura original del proyecto HeroesApp.
