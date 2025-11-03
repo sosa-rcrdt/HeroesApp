@@ -53,7 +53,7 @@ npm install
 
 ## Ejecución del Frontend (Angular)
 
-Inicia el servidor de desarrollo:
+Inicia el servidor de desarrollo, dentro de la carpeta `heroesApp/`:
 ```bash
 ng serve
 ```
@@ -68,7 +68,7 @@ http://localhost:4200/
 ## Ejecución del Backend (JSON-Server)
 
 La aplicación utiliza un archivo `db.json` para simular una base de datos.  
-Este archivo se encuentra en la raíz del proyecto o en la carpeta `assets/`.
+Este archivo se encuentra en la carpeta `heroesServer/`.
 
 Ejecuta el siguiente comando:
 ```bash
@@ -111,16 +111,14 @@ src/
 │   │   ├── services/      # Comunicación con backend
 │   │   └── pipes/         # Pipes personalizados
 │   ├── material/          # Módulo con imports de Angular Material
-│   ├── shared/            # Elementos compartidos (404, layouts)
+│   ├── shared/            # Elementos compartidos
 │   ├── app-routing.module.ts
 │   └── app.module.ts
 │
 ├── assets/
 │   └── heroes/            # Imágenes locales de los héroes
 │
-├── environments/          # Configuración de entornos
-│
-└── db.json                # Base de datos del backend simulado
+└── environments/          # Configuración de entornos
 ```
 
 ---
